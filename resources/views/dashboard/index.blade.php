@@ -29,8 +29,8 @@
         overflow: hidden;
         padding: 20px;
         border: 1px solid var(--line-soft);
-        background: #ffffff;
-        box-shadow: 0 12px 32px rgba(7, 17, 31, 0.055);
+        background: var(--surface);
+        box-shadow: var(--shadow);
     }
 
     .metric-card::after {
@@ -59,7 +59,7 @@
     .metric-value {
         display: block;
         margin-top: 15px;
-        color: var(--navy-900);
+        color: var(--ink);
         font-size: clamp(1.7rem, 2.7vw, 2.25rem);
         font-weight: 780;
         line-height: 1;
@@ -98,7 +98,7 @@
 
     .panel-kicker {
         margin: 0 0 6px;
-        color: var(--blue-500);
+        color: var(--accent-text);
         font-size: 0.61rem;
         font-weight: 850;
         letter-spacing: 0.14em;
@@ -107,7 +107,7 @@
 
     .panel-title {
         margin: 0;
-        color: var(--navy-900);
+        color: var(--ink);
         font-size: 0.98rem;
         font-weight: 760;
     }
@@ -122,7 +122,7 @@
         display: flex;
         height: 9px;
         overflow: hidden;
-        background: #edf1f5;
+        background: var(--line-soft);
     }
 
     .health-online { background: var(--success); }
@@ -155,7 +155,7 @@
 
     .storage-value {
         margin: 0 0 12px;
-        color: var(--navy-900);
+        color: var(--ink);
         font-size: 1.65rem;
         font-weight: 780;
         letter-spacing: -0.035em;
@@ -189,7 +189,7 @@
         padding: 6px 9px;
         border: 1px solid var(--line);
         color: var(--muted);
-        background: #f8fafc;
+        background: var(--surface-raised);
         font-size: 0.61rem;
         font-weight: 800;
         letter-spacing: 0.05em;
@@ -220,14 +220,14 @@
         width: 108px;
         aspect-ratio: 1;
         border-radius: 50%;
-        background: #ffffff;
+        background: var(--surface);
         box-shadow: inset 0 0 0 1px var(--line-soft);
     }
 
     .availability-ring-value {
         position: relative;
         z-index: 1;
-        color: var(--navy-900);
+        color: var(--ink);
         font-size: 1.55rem;
         font-weight: 800;
         letter-spacing: -0.05em;
@@ -280,7 +280,7 @@
     }
 
     .availability-count {
-        color: var(--navy-900);
+        color: var(--ink);
         font-size: 0.82rem;
         font-weight: 820;
         font-variant-numeric: tabular-nums;
@@ -311,7 +311,7 @@
     }
 
     .chart-branch-name strong {
-        color: var(--navy-900);
+        color: var(--ink);
         font-size: 0.68rem;
         font-weight: 760;
     }
@@ -326,14 +326,14 @@
         display: flex;
         height: 17px;
         overflow: hidden;
-        background: #edf1f5;
+        background: var(--line-soft);
     }
 
-    .branch-bar-online { background: var(--blue-500); }
+    .branch-bar-online { background: var(--success); }
     .branch-bar-offline { background: var(--danger); }
 
     .branch-chart-value {
-        color: var(--navy-900);
+        color: var(--ink);
         font-size: 0.66rem;
         font-weight: 820;
         text-align: right;
@@ -374,7 +374,7 @@
 
     .region-label strong {
         overflow: hidden;
-        color: var(--navy-900);
+        color: var(--ink);
         font-size: 0.68rem;
         font-weight: 760;
         text-overflow: ellipsis;
@@ -390,7 +390,7 @@
 
     .region-track {
         height: 11px;
-        background: #edf1f5;
+        background: var(--line-soft);
     }
 
     .region-volume {
@@ -400,7 +400,7 @@
         overflow: hidden;
     }
 
-    .region-online { background: var(--blue-500); }
+    .region-online { background: var(--success); }
     .region-offline { background: var(--danger); }
 
     .chart-legend-note {
@@ -421,7 +421,7 @@
     .chart-legend-note i {
         width: 8px;
         height: 8px;
-        background: var(--blue-500);
+        background: var(--success);
     }
 
     .chart-legend-note i.offline { background: var(--danger); }
@@ -444,8 +444,8 @@
     .attention-table th {
         padding: 10px 12px;
         border-bottom: 1px solid var(--line);
-        color: #607286;
-        background: #f6f8fa;
+        color: var(--muted);
+        background: var(--surface-raised);
         font-size: 0.56rem;
         font-weight: 850;
         letter-spacing: 0.08em;
@@ -480,13 +480,13 @@
     }
 
     .availability-inline strong {
-        color: var(--navy-900);
+        color: var(--ink);
         font-size: 0.62rem;
         font-variant-numeric: tabular-nums;
     }
 
     .attention-number {
-        color: var(--navy-900);
+        color: var(--ink);
         font-weight: 800;
         font-variant-numeric: tabular-nums;
     }
@@ -528,7 +528,7 @@
         gap: 10px;
         padding: 16px 22px;
         border-bottom: 1px solid var(--line-soft);
-        background: #f9fbfc;
+        background: var(--surface-raised);
     }
 
     .filter-search {
@@ -595,8 +595,8 @@
         top: 0;
         padding: 13px 14px;
         border-bottom: 1px solid var(--line);
-        color: #607286;
-        background: #f6f8fa;
+        color: var(--muted);
+        background: var(--surface-raised);
         font-size: 0.61rem;
         font-weight: 850;
         letter-spacing: 0.09em;
@@ -610,7 +610,7 @@
     }
 
     .sort-link:hover {
-        color: var(--blue-500);
+        color: var(--accent-text);
     }
 
     .inventory-table td {
@@ -626,7 +626,7 @@
     }
 
     .inventory-table tbody tr:hover {
-        background: #f9fbfc;
+        background: var(--surface-hover);
     }
 
     .inventory-table tbody tr.needs-attention {
@@ -640,7 +640,7 @@
 
     .cell-primary {
         display: block;
-        color: var(--navy-900);
+        color: var(--ink);
         font-size: 0.77rem;
         font-weight: 760;
         line-height: 1.35;
@@ -657,7 +657,7 @@
     .camera-total {
         display: block;
         margin-bottom: 7px;
-        color: var(--navy-900);
+        color: var(--ink);
         font-weight: 780;
     }
 
@@ -670,7 +670,7 @@
     .camera-chip {
         padding: 3px 6px;
         border-radius: 2px;
-        color: #15803d;
+        color: var(--success);
         background: var(--success-soft);
         font-size: 0.59rem;
         font-weight: 800;
@@ -716,7 +716,7 @@
     .remarks-flag {
         display: inline-block;
         margin-top: 6px;
-        color: var(--blue-500);
+        color: var(--accent-text);
         font-size: 0.61rem;
         font-weight: 760;
     }
@@ -738,7 +738,7 @@
         display: grid;
         place-items: center;
         border: 1px solid var(--line);
-        color: var(--blue-500);
+        color: var(--accent-text);
         font-size: 0.7rem;
         font-weight: 850;
     }
@@ -773,7 +773,7 @@
         border: 0;
         border-radius: 5px;
         color: var(--ink);
-        background: #ffffff;
+        background: var(--surface);
         box-shadow: 0 28px 80px rgba(7, 17, 31, 0.28);
     }
 
@@ -803,7 +803,7 @@
         border: 1px solid var(--line);
         border-radius: 3px;
         color: var(--muted);
-        background: #ffffff;
+        background: var(--surface-raised);
         font-size: 1.2rem;
         line-height: 1;
         cursor: pointer;
@@ -820,12 +820,12 @@
         min-width: 0;
         padding: 20px;
         border: 1px solid var(--line);
-        background: #fbfcfd;
+        background: var(--surface-raised);
     }
 
     .import-option h3 {
         margin: 0;
-        color: var(--navy-900);
+        color: var(--ink);
         font-size: 0.9rem;
     }
 
@@ -845,7 +845,8 @@
     .import-upload-form .control {
         min-height: 43px;
         padding: 8px;
-        background: #ffffff;
+        color: var(--field-ink);
+        background: var(--field);
     }
 
     .import-upload-form .button,
@@ -906,7 +907,7 @@
             padding: 14px;
             border: 1px solid var(--line-soft);
             border-left: 3px solid var(--blue-500);
-            background: #ffffff;
+            background: var(--surface);
             box-shadow: 0 8px 20px rgba(7, 17, 31, 0.045);
         }
         .inventory-table tbody tr.needs-attention { border-left-color: var(--warning); }

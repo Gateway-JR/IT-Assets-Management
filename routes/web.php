@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CctvSiteController;
+use App\Http\Controllers\ItAssetController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\EnsureUserIsAdmin;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +21,10 @@ Route::middleware('auth')->group(function (): void {
     Route::post('/cctv-sites/import', [CctvSiteController::class, 'import'])
         ->name('cctv-sites.import');
     Route::resource('cctv-sites', CctvSiteController::class)->except('index');
+
+    Route::post('/it-assets/import', [ItAssetController::class, 'import'])
+        ->name('it-assets.import');
+    Route::resource('it-assets', ItAssetController::class);
 
     Route::resource('users', UserController::class)
         ->middleware(EnsureUserIsAdmin::class);

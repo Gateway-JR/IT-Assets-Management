@@ -47,7 +47,7 @@
 
     .section-heading h2 {
         margin: 0;
-        color: var(--navy-900);
+        color: var(--ink);
         font-size: 0.95rem;
         font-weight: 780;
     }
@@ -93,13 +93,13 @@
         gap: 18px;
         padding: 12px 14px;
         border-left: 3px solid var(--blue-500);
-        color: #35506b;
+        color: var(--accent-text);
         background: var(--blue-100);
         font-size: 0.7rem;
     }
 
     .allocation strong {
-        color: var(--navy-900);
+        color: var(--ink);
     }
 
     .allocation.invalid {
@@ -134,7 +134,7 @@
         gap: 10px;
         padding: 19px 26px;
         border-top: 1px solid var(--line-soft);
-        background: #f9fbfc;
+        background: var(--surface-raised);
     }
 
     .context-card {
@@ -145,7 +145,7 @@
 
     .context-title {
         margin: 0;
-        color: var(--navy-900);
+        color: var(--ink);
         font-size: 0.88rem;
         font-weight: 780;
     }
@@ -167,7 +167,7 @@
         position: relative;
         margin-top: 13px;
         padding-left: 17px;
-        color: #52677d;
+        color: var(--muted);
         font-size: 0.68rem;
         line-height: 1.45;
     }

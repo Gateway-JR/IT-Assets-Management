@@ -20,7 +20,7 @@
         padding: 26px;
         color: #ffffff;
         background:
-            radial-gradient(circle at 100% 0, rgba(103, 215, 231, 0.16), transparent 35%),
+            radial-gradient(circle at 100% 0, rgba(232, 25, 63, 0.18), transparent 35%),
             var(--navy-900);
     }
 
@@ -36,7 +36,7 @@
 
     .record-id {
         margin: 0 0 10px;
-        color: #8fc7ef;
+        color: var(--accent-on-dark);
         font-size: 0.64rem;
         font-weight: 850;
         letter-spacing: 0.14em;
@@ -52,7 +52,7 @@
 
     .record-location {
         margin: 9px 0 0;
-        color: #9fb2c6;
+        color: var(--muted-on-dark);
         font-size: 0.75rem;
     }
 
@@ -67,7 +67,7 @@
 
     .detail-heading {
         margin: 0 0 18px;
-        color: var(--blue-500);
+        color: var(--accent-text);
         font-size: 0.63rem;
         font-weight: 850;
         letter-spacing: 0.14em;
@@ -96,7 +96,7 @@
 
     .definition-grid dd {
         margin: 0;
-        color: var(--navy-900);
+        color: var(--ink);
         font-size: 0.78rem;
         font-weight: 680;
         line-height: 1.5;
@@ -116,7 +116,7 @@
     .camera-stat {
         padding: 15px;
         border: 1px solid var(--line-soft);
-        background: #f9fbfc;
+        background: var(--surface-raised);
     }
 
     .camera-stat span {
@@ -131,7 +131,7 @@
     .camera-stat strong {
         display: block;
         margin-top: 10px;
-        color: var(--navy-900);
+        color: var(--ink);
         font-size: 1.35rem;
         font-weight: 800;
     }
@@ -157,7 +157,7 @@
     }
 
     .storage-topline strong {
-        color: var(--navy-900);
+        color: var(--ink);
     }
 
     .side-card {
@@ -170,7 +170,7 @@
 
     .side-title {
         margin: 0;
-        color: var(--navy-900);
+        color: var(--ink);
         font-size: 0.9rem;
         font-weight: 780;
     }

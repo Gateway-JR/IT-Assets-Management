@@ -3,33 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#07111f">
-    <link rel="icon" type="image/png" href="{{ asset('images/gateway-mark.png') }}">
+    <meta name="theme-color" content="#f4f7fa">
+    <link rel="icon" type="image/png" href="{{ asset('images/Gateway_logo_circle.png') }}">
     <title>@yield('title', 'Inventory Dashboard') | Gateway IT Inventory System</title>
 
     <style>
         :root {
             color-scheme: light;
-            --navy-950: #07111f;
-            --navy-900: #0a1728;
-            --navy-800: #10243a;
-            --navy-700: #17324f;
-            --blue-600: #176db8;
-            --blue-500: #1c7ed6;
-            --blue-100: #e8f3fc;
-            --cyan-300: #67d7e7;
+            --navy-950: #020d19;
+            --navy-900: #061626;
+            --navy-800: #081b2b;
+            --navy-700: #10283e;
+            --blue-600: #c91235;
+            --blue-500: #e8193f;
+            --blue-100: #fff0f3;
+            --cyan-300: #ff4566;
+            --accent: #e8193f;
+            --accent-hover: #c91235;
+            --accent-text: #b51235;
+            --accent-on-dark: #ff6b83;
+            --accent-soft: rgba(232, 25, 63, 0.1);
             --ink: #122033;
-            --muted: #64748b;
-            --muted-light: #94a3b8;
-            --line: #dce4ec;
-            --line-soft: #e8eef3;
+            --muted: #526176;
+            --muted-light: #64748b;
+            --muted-on-dark: #9fb2c6;
+            --line: #d7e0e9;
+            --line-soft: #e7edf3;
             --surface: #ffffff;
+            --surface-raised: #f6f8fa;
+            --surface-hover: #f1f5f8;
             --canvas: #f4f7fa;
-            --success: #16a34a;
+            --field: #ffffff;
+            --field-ink: #122033;
+            --field-placeholder: #64748b;
+            --success: #15803d;
             --success-soft: #eaf8ef;
             --danger: #b42318;
             --danger-soft: #fef3f2;
-            --warning: #c66a10;
+            --warning: #a85d0b;
             --warning-soft: #fff7e6;
             --sidebar-width: 252px;
             --shadow: 0 18px 45px rgba(7, 17, 31, 0.08);
@@ -78,7 +89,7 @@
             overflow-y: auto;
             color: #ffffff;
             background:
-                radial-gradient(circle at 0 0, rgba(61, 162, 242, 0.14), transparent 32%),
+                radial-gradient(circle at 0 0, rgba(232, 25, 63, 0.14), transparent 32%),
                 var(--navy-950);
             transition: transform 180ms ease;
         }
@@ -149,7 +160,7 @@
 
         .nav-label {
             margin: 0 10px 10px;
-            color: #61778f;
+            color: #687f97;
             font-size: 0.61rem;
             font-weight: 800;
             letter-spacing: 0.16em;
@@ -164,7 +175,7 @@
             margin-bottom: 4px;
             padding: 0 12px;
             border-left: 2px solid transparent;
-            color: #9fb2c6;
+            color: var(--muted-on-dark);
             font-size: 0.82rem;
             font-weight: 650;
             text-decoration: none;
@@ -175,7 +186,7 @@
         .nav-link.active {
             border-left-color: var(--cyan-300);
             color: #ffffff;
-            background: rgba(61, 162, 242, 0.11);
+            background: var(--accent-soft);
         }
 
         .nav-icon {
@@ -185,7 +196,7 @@
             place-items: center;
             flex: 0 0 auto;
             border: 1px solid rgba(255, 255, 255, 0.14);
-            color: #8fc7ef;
+            color: var(--accent-on-dark);
             font-size: 0.52rem;
             font-weight: 850;
             letter-spacing: 0.04em;
@@ -258,8 +269,8 @@
             height: 42px;
             padding: 0;
             border: 1px solid var(--line);
-            color: var(--navy-900);
-            background: #ffffff;
+            color: var(--ink);
+            background: var(--surface-raised);
             cursor: pointer;
         }
 
@@ -290,7 +301,7 @@
 
         .topbar-kicker {
             margin: 0 0 4px;
-            color: var(--blue-500);
+            color: var(--accent-text);
             font-size: 0.61rem;
             font-weight: 850;
             letter-spacing: 0.15em;
@@ -300,7 +311,7 @@
         .topbar-title {
             overflow: hidden;
             margin: 0;
-            color: var(--navy-900);
+            color: var(--ink);
             font-size: 1rem;
             font-weight: 760;
             text-overflow: ellipsis;
@@ -359,7 +370,7 @@
 
         .page-eyebrow {
             margin: 0 0 9px;
-            color: var(--blue-500);
+            color: var(--accent-text);
             font-size: 0.66rem;
             font-weight: 850;
             letter-spacing: 0.16em;
@@ -368,7 +379,7 @@
 
         .page-title {
             margin: 0;
-            color: var(--navy-900);
+            color: var(--ink);
             font-size: clamp(1.75rem, 3.2vw, 2.55rem);
             font-weight: 760;
             line-height: 1.08;
@@ -399,8 +410,8 @@
             padding: 0 16px;
             border: 1px solid var(--line);
             border-radius: 3px;
-            color: var(--navy-800);
-            background: #ffffff;
+            color: var(--ink);
+            background: var(--surface-raised);
             font-size: 0.75rem;
             font-weight: 760;
             text-decoration: none;
@@ -410,14 +421,14 @@
 
         .button:hover {
             border-color: #b9c7d5;
-            background: #f9fbfc;
+            background: var(--surface-hover);
         }
 
         .button-primary {
             border-color: var(--blue-500);
             color: #ffffff;
             background: var(--blue-500);
-            box-shadow: 0 9px 20px rgba(28, 126, 214, 0.18);
+            box-shadow: 0 9px 20px rgba(232, 25, 63, 0.22);
         }
 
         .button-primary:hover {
@@ -484,7 +495,7 @@
 
         .badge-success {
             border-color: #c7ead2;
-            color: #15803d;
+            color: var(--success);
             background: var(--success-soft);
         }
 
@@ -503,13 +514,13 @@
         .badge-neutral {
             border-color: var(--line);
             color: var(--muted);
-            background: #f6f8fa;
+            background: var(--surface-raised);
         }
 
         .progress {
             height: 6px;
             overflow: hidden;
-            background: #e9eef3;
+            background: var(--line-soft);
         }
 
         .progress > span {
@@ -542,8 +553,9 @@
             border: 1px solid #cbd6e1;
             border-radius: 3px;
             outline: 0;
-            color: var(--ink);
-            background: #ffffff;
+            color-scheme: light;
+            color: var(--field-ink);
+            background: var(--field);
             font-size: 0.78rem;
             transition: border-color 150ms ease, box-shadow 150ms ease;
         }
@@ -556,11 +568,11 @@
 
         .control:focus {
             border-color: var(--blue-500);
-            box-shadow: 0 0 0 3px rgba(28, 126, 214, 0.11);
+            box-shadow: 0 0 0 3px rgba(232, 25, 63, 0.14);
         }
 
         .control::placeholder {
-            color: var(--muted-light);
+            color: var(--field-placeholder);
         }
 
         .field-error {
@@ -576,11 +588,11 @@
             inset: 0;
             display: none;
             border: 0;
-            background: rgba(7, 17, 31, 0.58);
+            background: rgba(2, 11, 22, 0.72);
         }
 
         :focus-visible {
-            outline: 3px solid rgba(61, 162, 242, 0.35);
+            outline: 3px solid rgba(232, 25, 63, 0.42);
             outline-offset: 2px;
         }
 
@@ -670,6 +682,10 @@
                 <a class="nav-link {{ request()->routeIs('cctv-sites.*') ? 'active' : '' }}" data-dashboard-section="inventory" href="{{ route('dashboard') }}#inventory">
                     <span class="nav-icon" aria-hidden="true">SI</span>
                     Site inventory
+                </a>
+                <a class="nav-link {{ request()->routeIs('it-assets.*') ? 'active' : '' }}" href="{{ route('it-assets.index') }}">
+                    <span class="nav-icon" aria-hidden="true">IT</span>
+                    IT assets
                 </a>
                 @if (auth()->user()->is_admin)
                     <a class="nav-link {{ request()->routeIs('users.*') ? 'active' : '' }}" href="{{ route('users.index') }}">
